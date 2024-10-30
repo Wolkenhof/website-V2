@@ -1169,10 +1169,12 @@ a[href*='mailto'] {
 }
 
 .partner1 {
+	max-height: 350px;
 	background-image: linear-gradient(to right, rgba(196, 196, 196, 0.274), rgba(255, 255, 255, 0))
 }
 
 .partner2 {
+	max-height: 350px;
 	background-image: linear-gradient(to left, rgba(196, 196, 196, 0.274), rgba(255, 255, 255, 0))
 }
 
@@ -1921,16 +1923,19 @@ hr {
 
 .button-primary,
 .button-primary:focus {
-	color: var(--wh-blue);
-	border-color: var(--wh-green);
+	color: #fff;
+	border: 3px solid #ffffff;
+	background-color: #05659891;
 }
 
 .button-primary:hover,
 .button-primary:active,
 .button-primary.active {
+	border: 3px solid #ffffff;
+	color: #fff;
 	color: #ffffff;
-	background-color: #2c343b;
-	border-color: #2c343b;
+	transition: all ease .35s;
+	background-color: var(--wh-green);
 }
 
 .button-service,
@@ -9476,4 +9481,85 @@ ul.drop-down {
 
 .blockquote-text {
 	font-size: 24px;
+}
+
+#badge-logo-slider {
+    display: flex;
+    transition: transform 0.5s ease-out;
+}
+
+/* Logo Slider */
+
+.logo-slider {
+    background: #FAFAFA;
+    -webkit-box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
+    box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.125);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.logo-slider::before,
+.logo-slider::after {
+    background: -webkit-gradient(linear, left top, right top, from(#FAFAFA), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(to right, #FAFAFA 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 250px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+
+.logo-slider::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+}
+
+.logo-slider::before {
+    left: 0;
+    top: 0;
+}
+
+.logo-slider .logo-slide-track {
+    -webkit-animation: logo-scroll 60s linear infinite;
+    animation: logo-scroll 60s linear infinite;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(250px * 14);
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
+.logo-slider .slide {
+    height: 250px;
+    width: 260px;
+    padding: 20px;
+}
+
+@-webkit-keyframes logo-scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(calc(-250px * 7));
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+@keyframes logo-scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(calc(-250px * 7));
+        transform: translateX(calc(-250px * 7));
+    }
 }
