@@ -1942,18 +1942,41 @@ hr {
 
 .button-service,
 .button-service:focus {
-	color: var(--wh-blue);
-	background-color: var(--wh-green);
-	border-color: var(--wh-blue);
+	border: 3px solid #ffffff;
+	color: #fff !important;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all ease .35s;
+	background-color: #05659891;
 }
 
 .button-service:hover,
 .button-service:active,
 .button-service.active {
-	color: #fff;
+	color: #fff !important;
+	transition: all ease .35s;
 	background-color: var(--wh-green);
-	border-color: #fff;
 }
+
+
+
+/* .button-way-point {
+	width: 67px;
+	height: 67px;
+	border: 3px solid #ffffff;
+	color: #fff;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all ease .35s;
+	background-color: #05659891;
+}
+
+.button-way-point:hover {
+	color: #fff;
+	transition: all ease .35s;
+	background-color: var(--wh-green);
+} */
+
 
 .button-primary.button-ujarak::before {
 	background: #2c343b;
@@ -9442,8 +9465,9 @@ ul.drop-down {
 .quote-container .quote {
 	position: relative;
 	z-index: 600;
-	padding: 40px 0 40px 20px;
+	padding: 20px 0 20px 10px;
 	margin: 0;
+	margin-left: 50px;
 	font-size: 20px;
 	font-style: italic;
 	line-height: 1.4 !important;
@@ -9453,7 +9477,6 @@ ul.drop-down {
 
 .quote-container .quote p {
 	position: relative;
-	margin-bottom: 20px;
 }
 
 .quote-container .quote p:first-child:before {
@@ -9591,70 +9614,6 @@ ul.drop-down {
 
 
 
-.support {
-	cursor: pointer;
-}
-
-.support-wolke {
-	width: 5%;
-	position: fixed;
-	right: 2%;
-	top: 14%;
-	z-index: 99;
-	-webkit-filter: drop-shadow(1px 1px 1px #00000071);
-	filter: drop-shadow(1px 1px 1px #00000071);
-
-	animation-delay: 1s;
-	animation-name: fadeInLeft;
-
-	transition-duration: 0.75s;
-	transition-property: transform;
-
-	&:hover {
-		transform: scale(1.1);
-	}
-}
-
-.support-text {
-	display: none;
-	/* Verborgener Zustand */
-	opacity: 0;
-	/* Startet mit einer Transparenz von 0 */
-	position: fixed;
-	right: 2%;
-	top: 22%;
-	z-index: 99;
-	transform: translateX(100%);
-	background-color: #056598;
-	border: solid #000000 1px;
-	padding: 5px;
-	color: #fff;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	z-index: 10;
-}
-
-.support-text.show {
-	display: block;
-	/* Zeigt das Element */
-	opacity: 1;
-	transform: translateX(0);
-}
-
-.support-wolke.show {
-	width: 5%;
-	position: fixed;
-	right: 9%;
-	top: 14%;
-
-}
-
-
-
-
-
-
-
-
 .floating-chat {
 	align-items: center;
 	justify-content: center;
@@ -9666,7 +9625,7 @@ ul.drop-down {
 	transition: all 250ms ease-out;
 	opacity: 0;
 	cursor: pointer;
-	z-index: 99;
+	z-index: 10;
 
 	&.enter:hover {
 		opacity: 1;
@@ -9680,7 +9639,7 @@ ul.drop-down {
 	&.expand {
 		cursor: auto;
 		opacity: 1;
-		margin-right: 220px;
+		margin-right: 170px;
 	}
 
 	:focus {
@@ -9702,23 +9661,25 @@ ul.drop-down {
 		flex-direction: column;
 		position: absolute;
 		opacity: 0;
-		width: 1px;
-		height: 1px;
+		margin: 10px;
+		top: 20px;
+		width: 255px;
+		height: 180px;
+		padding-left: 30px;
+		left: 20px;
 		transition: all 250ms ease-out;
-		margin: auto;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
+
 		background-color: #05659891;
 		border-radius: 40px;
+		font-size: 15px;
+		z-index: -100000;
 
 		&.enter {
 			opacity: 1;
 			margin: 10px;
 			top: 20px;
-			width: 300px;
-			height: 200px;
+			width: 255px;
+			height: 180px;
 			padding-left: 30px;
 			left: 20px;
 		}
@@ -9734,7 +9695,7 @@ ul.drop-down {
 				flex-shrink: 1;
 				padding: 0 5px;
 				text-align: center;
-				font-size: 20px;
+				font-size: 16px;
 			}
 
 			button {
@@ -9804,4 +9765,132 @@ ul.drop-down {
 	100% {
 		margin-right: 0;
 	}
+}
+
+.card-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: -70px;
+}
+
+.card-container {
+	width: 80%;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-container .card {
+	position: relative;
+	border-radius: 10px;
+}
+
+.card-container .card .icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: 0.7s;
+	z-index: 1;
+}
+
+.card-container .card:nth-child(1) .icon {
+	background-image: url(../images/image1.jpg);
+	background-size: cover;
+}
+
+.card-container .card:nth-child(2) .icon {
+	background-image: url(../images/image2-1.jpg);
+	background-size: cover;
+}
+
+.card-container .card:nth-child(3) .icon {
+	background-image: url(../images/image3.jpg);
+	background-size: cover;
+}
+
+
+.card-container .card .icon .fa {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 80px;
+	transition: 0.7s;
+	color: #fff;
+}
+
+
+.card-container .card .face {
+	width: 450px;
+	height: 320px;
+	transition: 0.5s;
+}
+
+.card-container .card .face.face1 {
+	position: relative;
+	background: #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	transform: translateY(0px);
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.685);
+}
+
+.card-container .card:hover .face.face1 {
+	background: #ff0057;
+	transform: translateY(0px);
+}
+
+.card-container .card .face.face1 .content {
+	opacity: 1;
+	transition: 0.5s;
+}
+
+.card-container .card:hover .face.face1 .content {
+	opacity: 1;
+}
+
+.card-container .card .face.face1 .content i {
+	max-width: 100px;
+}
+
+.card-container .card .face.face2 {
+	position: relative;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	box-sizing: border-box;
+	box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.315);
+	transform: translateY(-320px);
+}
+
+.card-container .card:hover .face.face2 {
+	transform: translateY(0);
+}
+
+.card-container .card .face.face2 .content p {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #414141;
+}
+
+.card-container .card .face.face2 .content h3 {
+	margin: 0 0 10px 0;
+	padding: 0;
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	color: #414141;
+}
+
+.card-container a {
+	text-decoration: none;
+	color: #414141;
 }
