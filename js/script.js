@@ -18,26 +18,26 @@
 		livedemo = true,
 
 		plugins = {
-			bootstrapTooltip:        $( '[data-toggle="tooltip"]' ),
-			customToggle:            $( '[data-custom-toggle]' ),
-			counter:                 $( '.counter' ),
-			captcha:                 $( '.recaptcha' ),
-			campaignMonitor:         $( '.campaign-mailform' ),
-			copyrightYear:           $( '.copyright-year' ),
-			owl:                     $( '.owl-carousel' ),
-			progressLinear:          $( '.progress-linear' ),
-			preloader:               $( '.preloader' ),
-			rdNavbar:                $( '.rd-navbar' ),
-			rdMailForm:              $( '.rd-mailform' ),
-			rdInputLabel:            $( '.form-label' ),
-			regula:                  $( '[data-constraints]' ),
-			search:                  $( '.rd-search' ),
-			searchResults:           $( '.rd-search-results' ),
-			wow:                     $( '.wow' ),
-			parallaxJs:              $(".parallax-scene-js"),
-			maps:                    $( '.google-map-container' ),
-			customWaypoints:         $('[data-custom-scroll-to]'),
-			selectFilter:            $("select")
+			bootstrapTooltip: $('[data-toggle="tooltip"]'),
+			customToggle: $('[data-custom-toggle]'),
+			counter: $('.counter'),
+			captcha: $('.recaptcha'),
+			campaignMonitor: $('.campaign-mailform'),
+			copyrightYear: $('.copyright-year'),
+			owl: $('.owl-carousel'),
+			progressLinear: $('.progress-linear'),
+			preloader: $('.preloader'),
+			rdNavbar: $('.rd-navbar'),
+			rdMailForm: $('.rd-mailform'),
+			rdInputLabel: $('.form-label'),
+			regula: $('[data-constraints]'),
+			search: $('.rd-search'),
+			searchResults: $('.rd-search-results'),
+			wow: $('.wow'),
+			parallaxJs: $(".parallax-scene-js"),
+			maps: $('.google-map-container'),
+			customWaypoints: $('[data-custom-scroll-to]'),
+			selectFilter: $("select")
 		};
 
 	/**
@@ -45,8 +45,8 @@
 	 * @param {object} elem - jQuery object
 	 * @return {boolean}
 	 */
-	function isScrolledIntoView ( elem ) {
-		if ( isNoviBuilder ) return true;
+	function isScrolledIntoView(elem) {
+		if (isNoviBuilder) return true;
 		return elem.offset().top + elem.outerHeight() >= $window.scrollTop() && elem.offset().top <= $window.scrollTop() + $window.height();
 	}
 
@@ -55,16 +55,16 @@
 	 * @param {object} element - jQuery object
 	 * @param {function} func - init function
 	 */
-	function lazyInit( element, func ) {
+	function lazyInit(element, func) {
 		var scrollHandler = function () {
-			if ( ( !element.hasClass( 'lazy-loaded' ) && ( isScrolledIntoView( element ) ) ) ) {
+			if ((!element.hasClass('lazy-loaded') && (isScrolledIntoView(element)))) {
 				func.call();
-				element.addClass( 'lazy-loaded' );
+				element.addClass('lazy-loaded');
 			}
 		};
 
 		scrollHandler();
-		$window.on( 'scroll', scrollHandler );
+		$window.on('scroll', scrollHandler);
 	}
 
 	// Initialize scripts that require a loaded page
@@ -72,7 +72,7 @@
 		// Page loader & Page transition
 		if (plugins.preloader.length && !isNoviBuilder) {
 			pageTransition({
-				target: document.querySelector( '.page' ),
+				target: document.querySelector('.page'),
 				delay: 0,
 				duration: 500,
 				classIn: 'fadeIn',
@@ -81,10 +81,10 @@
 				conditions: function (event, link) {
 					return link && !/(\#|callto:|tel:|mailto:|:\/\/)/.test(link) && !event.currentTarget.hasAttribute('data-lightgallery');
 				},
-				onTransitionStart: function ( options ) {
-					setTimeout( function () {
+				onTransitionStart: function (options) {
+					setTimeout(function () {
 						plugins.preloader.removeClass('loaded');
-					}, options.duration * .75 );
+					}, options.duration * .75);
 				},
 				onReady: function () {
 					plugins.preloader.addClass('loaded');
@@ -94,40 +94,40 @@
 		}
 
 		// jQuery Count To
-		if ( plugins.counter.length ) {
-			for ( var i = 0; i < plugins.counter.length; i++ ) {
+		if (plugins.counter.length) {
+			for (var i = 0; i < plugins.counter.length; i++) {
 				var
 					counter = $(plugins.counter[i]),
 					initCount = function () {
 						var counter = $(this);
-						if ( !counter.hasClass( "animated-first" ) && isScrolledIntoView( counter ) ) {
+						if (!counter.hasClass("animated-first") && isScrolledIntoView(counter)) {
 							counter.countTo({
 								refreshInterval: 40,
 								speed: counter.attr("data-speed") || 1000,
 								from: 0,
-								to: parseInt( counter.text(), 10 )
+								to: parseInt(counter.text(), 10)
 							});
 							counter.addClass('animated-first');
 						}
 					};
 
-				$.proxy( initCount, counter )();
-				$window.on( "scroll", $.proxy( initCount, counter ) );
+				$.proxy(initCount, counter)();
+				$window.on("scroll", $.proxy(initCount, counter));
 			}
 		}
 
 		// Progress bar
-		if ( plugins.progressLinear.length ) {
-			for ( var i = 0; i < plugins.progressLinear.length; i++) {
+		if (plugins.progressLinear.length) {
+			for (var i = 0; i < plugins.progressLinear.length; i++) {
 				var
 					bar = $(plugins.progressLinear[i]),
-					initProgress = function() {
+					initProgress = function () {
 						var
 							bar = $(this),
 							end = parseInt($(this).find('.progress-value').text(), 10);
 
-						if ( !bar.hasClass( "animated-first" ) && isScrolledIntoView( bar ) ) {
-							bar.find('.progress-bar-linear').css({width: end + '%'});
+						if (!bar.hasClass("animated-first") && isScrolledIntoView(bar)) {
+							bar.find('.progress-bar-linear').css({ width: end + '%' });
 							bar.find('.progress-value').countTo({
 								refreshInterval: 40,
 								from: 0,
@@ -138,8 +138,8 @@
 						}
 					};
 
-				$.proxy( initProgress, bar )();
-				$window.on( "scroll", $.proxy( initProgress, bar ) );
+				$.proxy(initProgress, bar)();
+				$window.on("scroll", $.proxy(initProgress, bar));
 			}
 		}
 
@@ -154,73 +154,73 @@
 		 * @desc Initialize owl carousel plugin
 		 * @param {object} carousel - carousel jQuery object
 		 */
-		function initOwlCarousel ( carousel ) {
+		function initOwlCarousel(carousel) {
 			var
-				aliaces = [ '-', '-sm-', '-md-', '-lg-', '-xl-', '-xxl-' ],
-				values = [ 0, 576, 768, 992, 1200, 1600 ],
+				aliaces = ['-', '-sm-', '-md-', '-lg-', '-xl-', '-xxl-'],
+				values = [0, 576, 768, 992, 1200, 1600],
 				responsive = {};
 
-			for ( var j = 0; j < values.length; j++ ) {
-				responsive[ values[ j ] ] = {};
-				for ( var k = j; k >= -1; k-- ) {
-					if ( !responsive[ values[ j ] ][ 'items' ] && carousel.attr( 'data' + aliaces[ k ] + 'items' ) ) {
-						responsive[ values[ j ] ][ 'items' ] = k < 0 ? 1 : parseInt( carousel.attr( 'data' + aliaces[ k ] + 'items' ), 10 );
+			for (var j = 0; j < values.length; j++) {
+				responsive[values[j]] = {};
+				for (var k = j; k >= -1; k--) {
+					if (!responsive[values[j]]['items'] && carousel.attr('data' + aliaces[k] + 'items')) {
+						responsive[values[j]]['items'] = k < 0 ? 1 : parseInt(carousel.attr('data' + aliaces[k] + 'items'), 10);
 					}
-					if ( !responsive[ values[ j ] ][ 'stagePadding' ] && responsive[ values[ j ] ][ 'stagePadding' ] !== 0 && carousel.attr( 'data' + aliaces[ k ] + 'stage-padding' ) ) {
-						responsive[ values[ j ] ][ 'stagePadding' ] = k < 0 ? 0 : parseInt( carousel.attr( 'data' + aliaces[ k ] + 'stage-padding' ), 10 );
+					if (!responsive[values[j]]['stagePadding'] && responsive[values[j]]['stagePadding'] !== 0 && carousel.attr('data' + aliaces[k] + 'stage-padding')) {
+						responsive[values[j]]['stagePadding'] = k < 0 ? 0 : parseInt(carousel.attr('data' + aliaces[k] + 'stage-padding'), 10);
 					}
-					if ( !responsive[ values[ j ] ][ 'margin' ] && responsive[ values[ j ] ][ 'margin' ] !== 0 && carousel.attr( 'data' + aliaces[ k ] + 'margin' ) ) {
-						responsive[ values[ j ] ][ 'margin' ] = k < 0 ? 30 : parseInt( carousel.attr( 'data' + aliaces[ k ] + 'margin' ), 10 );
+					if (!responsive[values[j]]['margin'] && responsive[values[j]]['margin'] !== 0 && carousel.attr('data' + aliaces[k] + 'margin')) {
+						responsive[values[j]]['margin'] = k < 0 ? 30 : parseInt(carousel.attr('data' + aliaces[k] + 'margin'), 10);
 					}
 				}
 			}
 
 			// Enable custom pagination
-			if ( carousel.attr( 'data-dots-custom' ) ) {
-				carousel.on( 'initialized.owl.carousel', function ( event ) {
+			if (carousel.attr('data-dots-custom')) {
+				carousel.on('initialized.owl.carousel', function (event) {
 					var
-						carousel = $( event.currentTarget ),
-						customPag = $( carousel.attr( 'data-dots-custom' ) ),
+						carousel = $(event.currentTarget),
+						customPag = $(carousel.attr('data-dots-custom')),
 						active = 0;
 
-					if ( carousel.attr( 'data-active' ) ) {
-						active = parseInt( carousel.attr( 'data-active' ), 10 );
+					if (carousel.attr('data-active')) {
+						active = parseInt(carousel.attr('data-active'), 10);
 					}
 
-					carousel.trigger( 'to.owl.carousel', [ active, 300, true ] );
-					customPag.find( '[data-owl-item="' + active + '"]' ).addClass( 'active' );
+					carousel.trigger('to.owl.carousel', [active, 300, true]);
+					customPag.find('[data-owl-item="' + active + '"]').addClass('active');
 
-					customPag.find( '[data-owl-item]' ).on( 'click', function ( event ) {
+					customPag.find('[data-owl-item]').on('click', function (event) {
 						event.preventDefault();
-						carousel.trigger( 'to.owl.carousel', [ parseInt( this.getAttribute( 'data-owl-item' ), 10 ), 300, true ] );
-					} );
+						carousel.trigger('to.owl.carousel', [parseInt(this.getAttribute('data-owl-item'), 10), 300, true]);
+					});
 
-					carousel.on( 'translate.owl.carousel', function ( event ) {
-						customPag.find( '.active' ).removeClass( 'active' );
-						customPag.find( '[data-owl-item="' + event.item.index + '"]' ).addClass( 'active' )
-					} );
-				} );
+					carousel.on('translate.owl.carousel', function (event) {
+						customPag.find('.active').removeClass('active');
+						customPag.find('[data-owl-item="' + event.item.index + '"]').addClass('active')
+					});
+				});
 			}
 
-			carousel.owlCarousel( {
-				autoplay:           isNoviBuilder ? false : carousel.attr( 'data-autoplay' ) !== 'false',
-				autoplayTimeout:    carousel.attr( "data-autoplay" ) ? Number( carousel.attr( "data-autoplay" ) ) : 3000,
+			carousel.owlCarousel({
+				autoplay: isNoviBuilder ? false : carousel.attr('data-autoplay') !== 'false',
+				autoplayTimeout: carousel.attr("data-autoplay") ? Number(carousel.attr("data-autoplay")) : 3000,
 				autoplayHoverPause: true,
-				loop:               isNoviBuilder ? false : carousel.attr( 'data-loop' ) !== 'false',
-				items:              1,
-				center:             carousel.attr( 'data-center' ) === 'true',
-				dotsContainer:      carousel.attr( 'data-pagination-class' ) || false,
-				navContainer:       carousel.attr( 'data-navigation-class' ) || false,
-				mouseDrag:          isNoviBuilder ? false : carousel.attr( 'data-mouse-drag' ) !== 'false',
-				nav:                carousel.attr( 'data-nav' ) === 'true',
-				dots:               carousel.attr( 'data-dots' ) === 'true',
-				dotsEach:           carousel.attr( 'data-dots-each' ) ? parseInt( carousel.attr( 'data-dots-each' ), 10 ) : false,
-				animateIn:          carousel.attr( 'data-animation-in' ) ? carousel.attr( 'data-animation-in' ) : false,
-				animateOut:         carousel.attr( 'data-animation-out' ) ? carousel.attr( 'data-animation-out' ) : false,
-				responsive:         responsive,
-				navText:            carousel.attr( 'data-nav-text' ) ? $.parseJSON( carousel.attr( 'data-nav-text' ) ) : [],
-				navClass:           carousel.attr( 'data-nav-class' ) ? $.parseJSON( carousel.attr( 'data-nav-class' ) ) : [ 'owl-prev', 'owl-next' ]
-			} );
+				loop: isNoviBuilder ? false : carousel.attr('data-loop') !== 'false',
+				items: 1,
+				center: carousel.attr('data-center') === 'true',
+				dotsContainer: carousel.attr('data-pagination-class') || false,
+				navContainer: carousel.attr('data-navigation-class') || false,
+				mouseDrag: isNoviBuilder ? false : carousel.attr('data-mouse-drag') !== 'false',
+				nav: carousel.attr('data-nav') === 'true',
+				dots: carousel.attr('data-dots') === 'true',
+				dotsEach: carousel.attr('data-dots-each') ? parseInt(carousel.attr('data-dots-each'), 10) : false,
+				animateIn: carousel.attr('data-animation-in') ? carousel.attr('data-animation-in') : false,
+				animateOut: carousel.attr('data-animation-out') ? carousel.attr('data-animation-out') : false,
+				responsive: responsive,
+				navText: carousel.attr('data-nav-text') ? $.parseJSON(carousel.attr('data-nav-text')) : [],
+				navClass: carousel.attr('data-nav-class') ? $.parseJSON(carousel.attr('data-nav-class')) : ['owl-prev', 'owl-next']
+			});
 		}
 
 		/**
@@ -261,9 +261,9 @@
 			regula.custom({
 				name: 'PhoneNumber',
 				defaultMessage: 'Invalid phone number format',
-				validator: function() {
-					if ( this.value === '' ) return true;
-					else return /^(\+\d)?[0-9\-\(\) ]{5,}$/i.test( this.value );
+				validator: function () {
+					if (this.value === '') return true;
+					else return /^(\+\d)?[0-9\-\(\) ]{5,}$/i.test(this.value);
 				}
 			});
 
@@ -280,7 +280,7 @@
 				if (e.type !== "blur") if (!$this.parent().hasClass("has-error")) return;
 				if ($this.parents('.rd-mailform').hasClass('success')) return;
 
-				if (( results = $this.regula('validate') ).length) {
+				if ((results = $this.regula('validate')).length) {
 					for (i = 0; i < results.length; i++) {
 						$this.siblings(".form-validation").text(results[i].message).parent().addClass("has-error");
 					}
@@ -422,9 +422,9 @@
 			plugins.bootstrapTooltip.tooltip('dispose');
 
 			if (window.innerWidth < 576) {
-				plugins.bootstrapTooltip.tooltip({placement: 'bottom'});
+				plugins.bootstrapTooltip.tooltip({ placement: 'bottom' });
 			} else {
-				plugins.bootstrapTooltip.tooltip({placement: tooltipPlacement});
+				plugins.bootstrapTooltip.tooltip({ placement: tooltipPlacement });
 			}
 		}
 
@@ -441,7 +441,7 @@
 					coordinates.lng
 				), marker, map)
 			} catch (e) {
-				map.geocoder.geocode({'address': str}, function (results, status) {
+				map.geocoder.geocode({ 'address': str }, function (results, status) {
 					if (status === google.maps.GeocoderStatus.OK) {
 						var latitude = results[0].geometry.location.lat();
 						var longitude = results[0].geometry.location.lng();
@@ -461,14 +461,14 @@
 		function initMaps() {
 			var key;
 
-			for ( var i = 0; i < plugins.maps.length; i++ ) {
-				if ( plugins.maps[i].hasAttribute( "data-key" ) ) {
-					key = plugins.maps[i].getAttribute( "data-key" );
+			for (var i = 0; i < plugins.maps.length; i++) {
+				if (plugins.maps[i].hasAttribute("data-key")) {
+					key = plugins.maps[i].getAttribute("data-key");
 					break;
 				}
 			}
 
-			$.getScript('//maps.google.com/maps/api/js?'+ ( key ? 'key='+ key + '&' : '' ) +'sensor=false&libraries=geometry,places&v=quarterly', function () {
+			$.getScript('//maps.google.com/maps/api/js?' + (key ? 'key=' + key + '&' : '') + 'sensor=false&libraries=geometry,places&v=quarterly', function () {
 				var head = document.getElementsByTagName('head')[0],
 					insertBefore = head.insertBefore;
 
@@ -489,7 +489,7 @@
 						zoom: zoom,
 						styles: styles,
 						scrollwheel: false,
-						center: {lat: 0, lng: 0}
+						center: { lat: 0, lng: 0 }
 					});
 
 					// Add map object to map node
@@ -506,11 +506,11 @@
 					// Add markers from google-map-markers array
 					var markerItems = plugins.maps[i].querySelectorAll(".google-map-markers li");
 
-					if (markerItems.length){
+					if (markerItems.length) {
 						var markers = [];
-						for (var j = 0; j < markerItems.length; j++){
+						for (var j = 0; j < markerItems.length; j++) {
 							var markerElement = markerItems[j];
-							getLatLngObject(markerElement.getAttribute("data-location"), markerElement, plugins.maps[i], function(location, markerElement, mapElement){
+							getLatLngObject(markerElement.getAttribute("data-location"), markerElement, plugins.maps[i], function (location, markerElement, mapElement) {
 								var icon = markerElement.getAttribute("data-icon") || mapElement.getAttribute("data-icon");
 								var activeIcon = markerElement.getAttribute("data-icon-active") || mapElement.getAttribute("data-icon-active");
 								var info = markerElement.getAttribute("data-description") || "";
@@ -522,15 +522,15 @@
 									position: location,
 									map: mapElement.map
 								}
-								if (icon){
+								if (icon) {
 									markerData.icon = icon;
 								}
 								var marker = new google.maps.Marker(markerData);
 								markerElement.gmarker = marker;
-								markers.push({markerElement: markerElement, infoWindow: infoWindow});
+								markers.push({ markerElement: markerElement, infoWindow: infoWindow });
 								marker.isActive = false;
 								// Handle infoWindow close click
-								google.maps.event.addListener(infoWindow,'closeclick',(function(markerElement, mapElement){
+								google.maps.event.addListener(infoWindow, 'closeclick', (function (markerElement, mapElement) {
 									var markerIcon = null;
 									markerElement.gmarker.isActive = false;
 									markerIcon = markerElement.getAttribute("data-icon") || mapElement.getAttribute("data-icon");
@@ -539,16 +539,16 @@
 
 
 								// Set marker active on Click and open infoWindow
-								google.maps.event.addListener(marker, 'click', (function(markerElement, mapElement) {
+								google.maps.event.addListener(marker, 'click', (function (markerElement, mapElement) {
 									if (markerElement.infoWindow.getContent().length === 0) return;
 									var gMarker, currentMarker = markerElement.gmarker, currentInfoWindow;
-									for (var k =0; k < markers.length; k++){
+									for (var k = 0; k < markers.length; k++) {
 										var markerIcon;
-										if (markers[k].markerElement === markerElement){
+										if (markers[k].markerElement === markerElement) {
 											currentInfoWindow = markers[k].infoWindow;
 										}
 										gMarker = markers[k].markerElement.gmarker;
-										if (gMarker.isActive && markers[k].markerElement !== markerElement){
+										if (gMarker.isActive && markers[k].markerElement !== markerElement) {
 											gMarker.isActive = false;
 											markerIcon = markers[k].markerElement.getAttribute("data-icon") || mapElement.getAttribute("data-icon")
 											gMarker.setIcon(markerIcon);
@@ -558,13 +558,13 @@
 
 									currentMarker.isActive = !currentMarker.isActive;
 									if (currentMarker.isActive) {
-										if (markerIcon = markerElement.getAttribute("data-icon-active") || mapElement.getAttribute("data-icon-active")){
+										if (markerIcon = markerElement.getAttribute("data-icon-active") || mapElement.getAttribute("data-icon-active")) {
 											currentMarker.setIcon(markerIcon);
 										}
 
 										currentInfoWindow.open(map, marker);
-									}else{
-										if (markerIcon = markerElement.getAttribute("data-icon") || mapElement.getAttribute("data-icon")){
+									} else {
+										if (markerIcon = markerElement.getAttribute("data-icon") || mapElement.getAttribute("data-icon")) {
 											currentMarker.setIcon(markerIcon);
 										}
 										currentInfoWindow.close();
@@ -611,8 +611,8 @@
 		}
 
 		// Google maps
-		if( plugins.maps.length ) {
-			lazyInit( plugins.maps, initMaps );
+		if (plugins.maps.length) {
+			lazyInit(plugins.maps, initMaps);
 		}
 
 		// UI To Top
@@ -785,11 +785,11 @@
 		}
 
 		// Owl carousel
-		if ( plugins.owl.length ) {
-			for ( var i = 0; i < plugins.owl.length; i++ ) {
-				var carousel = $( plugins.owl[ i ] );
-				plugins.owl[ i ].owl = carousel;
-				initOwlCarousel( carousel );
+		if (plugins.owl.length) {
+			for (var i = 0; i < plugins.owl.length; i++) {
+				var carousel = $(plugins.owl[i]);
+				plugins.owl[i].owl = carousel;
+				initOwlCarousel(carousel);
 			}
 		}
 
@@ -855,8 +855,8 @@
 					var inputs = $this[0].getElementsByTagName('input');
 					for (var i = 0; i < inputs.length; i++) {
 						inputs[i].value = '';
-						var label = document.querySelector( '[for="'+ inputs[i].getAttribute( 'id' ) +'"]' );
-						if( label ) label.classList.remove( 'focus', 'not-empty' );
+						var label = document.querySelector('[for="' + inputs[i].getAttribute('id') + '"]');
+						if (label) label.classList.remove('focus', 'not-empty');
 					}
 
 					return false;
@@ -913,7 +913,7 @@
 								$.ajax({
 									method: "POST",
 									url: "bat/reCaptcha.php",
-									data: {'g-recaptcha-response': captchaToken},
+									data: { 'g-recaptcha-response': captchaToken },
 									async: false
 								})
 									.done(function (responceCode) {
@@ -1051,11 +1051,11 @@
 		 * @description Creates a parallax effect between an array of layers, driving the motion from the gyroscope output of a smartdevice. If no gyroscope is available, the cursor position is used.
 		 */
 		if (plugins.parallaxJs.length) {
-		for (var i = 0; i < plugins.parallaxJs.length; i++) {
-			var scene = plugins.parallaxJs[i];
-			new Parallax(scene);
+			for (var i = 0; i < plugins.parallaxJs.length; i++) {
+				var scene = plugins.parallaxJs[i];
+				new Parallax(scene);
+			}
 		}
-	}
 
 		//Custom Waypoints
 		if (plugins.customWaypoints.length && !isNoviBuilder) {
@@ -1095,3 +1095,48 @@
 		}
 	});
 }());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var element = $('.floating-chat');
+
+setTimeout(function () {
+	element.addClass('enter');
+}, 1000);
+
+element.click(openElement);
+
+function openElement() {
+	element.find('>i').hide();
+	element.addClass('expand');
+	element.find('.chat').addClass('enter');
+	element.find('.header button').click(closeElement);
+}
+
+function closeElement() {
+	console.log("Schließe Element...");
+	setTimeout(function () {
+		element.find('.chat').removeClass('enter');
+	}, 100);
+
+	element.find('>i').show();
+	element.find('.header button').off('click', closeElement);
+
+	setTimeout(function () {
+		element.removeClass('expand');
+	}, 100);
+}
+
