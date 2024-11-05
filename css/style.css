@@ -9441,10 +9441,6 @@ ul.drop-down {
 	border-radius: 40px;
 }
 
-.quote-container:hover {
-	cursor: -webkit-grab;
-	cursor: grab;
-}
 
 .quote-container .portrait {
 	position: absolute;
