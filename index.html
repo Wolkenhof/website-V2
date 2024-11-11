@@ -168,6 +168,7 @@
         </div>
       </div>
     </section>
+
     <!--Counters-->
     <section class="section bg-blue" style="margin-top: -165px;">
       <div class="container section-md">
@@ -252,8 +253,9 @@
               </h3>
               <p>Möchten Sie Ihre IT-Infrastruktur nachhaltig und effizient gestalten? Dann ist die Wolkenhof GreenCloud
                 ideal für Sie.</p>
-              <a class="button-width-190 button-service button-circle button-lg button offset-top-30" style="margin-left: 95px;
-                href=" /leistungen-greencloud.html">Mehr erfahren</a>
+              <div class="d-flex justify-content-center">
+                <a class="button-width-190 button-service button-circle button-lg button offset-top-30" href="/leistungen-greencloud.html">Mehr erfahren</a>
+              </div>
             </div>
           </div>
         </div>
@@ -271,8 +273,9 @@
                 <a href="" target="_blank">IT</a>
               </h3>
               <p>Individuelle Lösungen für den Aufbau, Betrieb und die Optimierung ihrer IT-Infrastrukturen.</p>
-              <a class="button-width-190 button-service button-circle button-lg button offset-top-30"
-                style="margin-left: 95px; href=" #">Mehr erfahren</a>
+              <div class="d-flex justify-content-center">
+                <a class="button-width-190 button-service button-circle button-lg button offset-top-30">Mehr erfahren</a>
+              </div>
             </div>
           </div>
         </div>
@@ -291,8 +294,9 @@
               </h3>
               <p>In enger Zusammenarbeit mit unseren Kunden gestalten wir individuelle Bürolösungen von der Planung bis
                 zur Einrichtung.</p>
-              <a class="button-width-190 button-service button-circle button-lg button offset-top-30"
-                style="margin-left: 95px;" href="#">Mehr erfahren</a>
+              <div class="d-flex justify-content-center">
+                  <a class="button-width-190 button-service button-circle button-lg button offset-top-30">Mehr erfahren</a>
+                </div>
             </div>
           </div>
         </div>
@@ -495,7 +499,6 @@
         <div class="logo-slider">
           <div class="logo-slide-track">
 
-
             <div class="slide">
               <a href="netzwerk-partner/#datev"><img style="filter: grayscale(1);"
                   src="images/partner-logos/DATEVx250.png"></a>
@@ -636,6 +639,7 @@
           </div>
           <div class="col-lg-4 wow fadeInLeft" data-wow-delay=".2s">
             <P class="footer-classic-title">Rückrufbitte</P>
+            <!--
             <form id="contact-form" class="form-inline" method="post" action="">
               <div class="form-wrap">
                 <input class="form-input" name="name" id="name" type="text" placeholder="Name*" required="required">
@@ -651,6 +655,31 @@
                   target="_blank">Ich akzeptiere die <strong style="color: #b3ddff;">Datenschutzerklärung</strong>.</a>
                 <button class="button button-primary button-circle" type="submit">Senden</button>
               </div>
+            </form>
+            -->
+          <form id="contact-form" class="form-inline" method="post" action="">
+            <div class="text-fields">
+                <div class="float-input">
+                  <div class="form__group field">
+                    <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+                    <label for="name" class="form__label">Name</label>
+                  </div>
+                  <input class="form-input" name="tel" id="tel" type="tel" placeholder="Telefon*" required="required">
+                  <span><i class="fa fa-phone"></i></span>
+                  <input class="form-input" name="topic" id="topic" type="text" placeholder="Stichwort*"
+                    required="required">
+                  <span><i class="fa fa-file"></i></span>
+                </div>
+            </div>
+            <div class="submit-area">
+                <input type="checkbox" required="required" name="datenschutz" id="datenschutz" value="gelesen"> <a
+                    href="/datenschutz" target="_blank"><strong
+                        style="color: #b3ddff;">Datenschutzerklärung</strong></a>
+                <strong>
+                    gelesen</strong><br>
+                <input type="submit" id="submit" name="submit" class="main-button" value="Senden">
+                <?php echo ((!empty($errorMessage)) ? $errorMessage : '') ?>
+            </div>
             </form>
           </div>
         </div>
@@ -672,7 +701,6 @@
   <div class="snackbars" id="form-output-global"></div>
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
-  <!--coded by Drel-->
 </body>
 
 </html>
