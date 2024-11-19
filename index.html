@@ -620,7 +620,7 @@
           <div class="col-lg-3 col-sm-8 wow fadeInUp">
             <P class="footer-classic-title">Kontakt</P>
             <div class="d-block offset-top-0">Schillerstraße 13b<span class="d-lg-block">29525 Uelzen</span></div>
-            <a class="d-inline-block accent-link" href="mailto:#">info@wolkenhof.com</a><a class="d-inline-block"
+            <a class="d-inline-block color-a" href="mailto:#">info@wolkenhof.com</a><a class="d-inline-block color-a"
               href="tel:#">+49 581 9036-0
             </a>
             <ul>
@@ -630,56 +630,58 @@
           <div class="col-lg-2 col-sm-4 wow fadeInUp" data-wow-delay=".3s">
             <P class="footer-classic-title">Kurzlinks</P>
             <ul class="footer-classic-nav-list">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">Über Uns</a></li>
-              <li><a href="#">Netzwerk & Partner</a></li>
-              <li><a href="#"></a></li>
-              <li><a href="contacts.html">Kontakt</a></li>
+              <li><a class="color-a" href="index.html">Home</a></li>
+              <li><a class="color-a" href="about.html">Über Uns</a></li>
+              <li><a class="color-a" href="#">Netzwerk & Partner</a></li>
+              <li><a class="color-a" href="#"></a></li>
+              <li><a class="color-a" href="contacts.html">Kontakt</a></li>
             </ul>
           </div>
           <div class="col-lg-4 wow fadeInLeft" data-wow-delay=".2s">
             <P class="footer-classic-title">Rückrufbitte</P>
-            <!--
-            <form id="contact-form" class="form-inline" method="post" action="">
-              <div class="form-wrap">
-                <input class="form-input" name="name" id="name" type="text" placeholder="Name*" required="required">
-                <span><i class="fa fa-user"></i></span>
-                <input class="form-input" name="tel" id="tel" type="tel" placeholder="Telefon*" required="required">
-                <span><i class="fa fa-phone"></i></span>
-                <input class="form-input" name="topic" id="topic" type="text" placeholder="Stichwort*"
-                  required="required">
-                <span><i class="fa fa-file"></i></span>
-              </div>
-              <div class="form-button group-sm text-center text-lg-left">
-                <input type="checkbox" name="datenschutz" id="datenschutz" value="gelesen"> <a href="/datenschutz"
-                  target="_blank">Ich akzeptiere die <strong style="color: #b3ddff;">Datenschutzerklärung</strong>.</a>
-                <button class="button button-primary button-circle" type="submit">Senden</button>
-              </div>
-            </form>
-            -->
-          <form id="contact-form" class="form-inline" method="post" action="">
-            <div class="text-fields">
-                <div class="float-input">
-                  <div class="form__group field">
-                    <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
-                    <label for="name" class="form__label">Name</label>
+            <form id="contact-form" class="form-inline">
+              <div class="screen-body-item">
+                <div class="app-form">
+                  <div class="app-form-group">
+                    <input class="app-form-control" name="name" id="name" placeholder="Name" required="required">
                   </div>
-                  <input class="form-input" name="tel" id="tel" type="tel" placeholder="Telefon*" required="required">
-                  <span><i class="fa fa-phone"></i></span>
-                  <input class="form-input" name="topic" id="topic" type="text" placeholder="Stichwort*"
-                    required="required">
-                  <span><i class="fa fa-file"></i></span>
+                  <div class="app-form-group">
+                    <input class="app-form-control" name="phone" id="phone" placeholder="Rufnummer" required="required">
+                  </div>
+                  <div class="app-form-group">
+                    <input class="app-form-control" name="mail" id="mail" placeholder="E-Mail (optional)">
+                  </div>
+                  <div class="app-form-group message">
+                    <input class="app-form-control" name="comment" id="comment" placeholder="Nachricht" required="required">
+                  </div>
+                  <div class="app-form-group buttons">
+                    <div class="submit-area">
+                      <input type="checkbox" required="required" name="datenschutz" id="datenschutz" value="gelesen"> <a
+                          href="/datenschutz" target="_blank"><strong style="color: #b3ddff;">Datenschutzerklärung</strong> </a><strong>gelesen</strong><br>
+                      <button class="form-button" type="sumbit">
+                        <div class="svg-wrapper-1">
+                          <div class="svg-wrapper">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              height="24"
+                            >
+                              <path fill="none" d="M0 0h24v24H0z"></path>
+                              <path
+                                fill="currentColor"
+                                d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <span>Senden</span>
+                      </button>
+                      <div id="form-status"></div>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <div class="submit-area">
-                <input type="checkbox" required="required" name="datenschutz" id="datenschutz" value="gelesen"> <a
-                    href="/datenschutz" target="_blank"><strong
-                        style="color: #b3ddff;">Datenschutzerklärung</strong></a>
-                <strong>
-                    gelesen</strong><br>
-                <input type="submit" id="submit" name="submit" class="main-button" value="Senden">
-                <?php echo ((!empty($errorMessage)) ? $errorMessage : '') ?>
-            </div>
+              </div>
             </form>
           </div>
         </div>
@@ -701,6 +703,25 @@
   <div class="snackbars" id="form-output-global"></div>
   <script src="js/core.min.js"></script>
   <script src="js/script.js"></script>
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        var formData = new FormData(this);
+        console.log("Got form data:")
+        console.log(formData)
+        fetch("https://wolkenhof.com/api/form.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("form-status").innerHTML = data; // Display the response in the form
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    });
+  </script>
 </body>
 
 </html>
