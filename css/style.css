@@ -64,10 +64,8 @@
 :root {
 	--wh-blue: #056598;
 	--wh-green: #39AA34;
-	monospace;
+	font-family: monospace;
 }
-
-
 
 a:focus,
 button:focus {
@@ -468,11 +466,38 @@ a:hover {
 a,
 a:focus,
 a:active {
-	color: #aab2b9;
+	color: #ffffff;
 }
 
 a:hover {
-	color: #ffffff;
+	color: #aab2b9;
+}
+
+.color-a {
+	background: linear-gradient(
+        to right,
+        rgb(15, 101, 152),
+        rgb(15, 101, 152)
+      ),
+      linear-gradient(
+        to right,
+        rgb(51, 183, 13),
+        rgb(15, 101, 152)
+      );
+    background-size:
+      100% 3px,
+      0 3px;
+    background-position:
+      100% 100%,
+      0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+.color-a:hover {
+	background-size:
+	0 3px,
+	100% 3px;
 }
 
 a[href*='tel'],
@@ -497,7 +522,7 @@ a[href*='mailto'] {
 }
 
 .accent-link {
-	color: #ffffff;
+	color: #eef6f6;
 }
 
 .accent-link:hover {
@@ -1665,7 +1690,6 @@ img {
 	display: inline-block;
 	font-weight: 400;
 	font-style: normal;
-	speak: none;
 	text-transform: none;
 }
 
@@ -1862,7 +1886,6 @@ hr {
 	text-overflow: ellipsis;
 	text-align: center;
 	cursor: pointer;
-	vertical-align: middle;
 	user-select: none;
 	transition: 250ms all ease-in-out;
 }
@@ -2236,7 +2259,6 @@ hr {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	vertical-align: middle;
 }
 
 .button.button-icon .icon {
@@ -2367,6 +2389,7 @@ input:-webkit-autofill~.form-validation {
 	background-image: none;
 	border-radius: 0;
 	-webkit-appearance: none;
+	appearance: none;
 	transition: .3s ease-in-out;
 	border: 1px solid #f5f5f5;
 	border-top-width: 0;
@@ -2637,6 +2660,7 @@ textarea.form-input {
 .toggle-custom {
 	padding-left: 60px;
 	-webkit-appearance: none;
+	appearance: none;
 }
 
 .toggle-custom:checked~.checkbox-custom-dummy::after {
@@ -4012,7 +4036,6 @@ textarea.form-input {
 	letter-spacing: .1em;
 	font-size: 14px;
 	font-weight: 700;
-	vertical-align: middle;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -4181,7 +4204,6 @@ textarea.form-input {
 
 .snackbars-right {
 	display: inline-block;
-	float: right;
 	text-transform: uppercase;
 }
 
@@ -4203,7 +4225,7 @@ textarea.form-input {
 .footer-classic {
 	padding: 30px 0;
 	background: var(--wh-blue);
-	color: #aab2b9;
+	color: #eef6f6;
 	font-size: 16px;
 }
 
@@ -4237,9 +4259,13 @@ textarea.form-input {
 	color: inherit;
 }
 
+
 .footer-classic-nav-list a:hover {
-	color: #505cfd;
+	/*color: #505cfd;*/
+	color: #aab2b9;
+
 }
+
 
 @media (min-width: 576px) {
 	.footer-classic-subscribe-form {
@@ -4767,6 +4793,7 @@ html.boxed body {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
 	.blog-layout__aside {
+		column-gap: 30px;
 		-moz-column-gap: 30px;
 		-webkit-column-gap: 30px;
 	}
@@ -6471,6 +6498,7 @@ html.tablet .ui-to-top {
 	outline-offset: 0;
 	cursor: pointer;
 	-webkit-appearance: none;
+	appearance: none;
 }
 
 .rd-navbar-search-toggle::-moz-focus-inner {
@@ -7881,6 +7909,7 @@ header.active ul.drop-down {
 	-webkit-transition: all 0.17s ease-in-out;
 	-o-transition: all 0.17s ease-in-out;
 	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-o-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
@@ -8264,6 +8293,7 @@ ul.drop-down {
 	outline: none;
 	outline-offset: 0;
 	cursor: pointer;
+	appearance: none;
 	-webkit-appearance: none;
 	position: absolute;
 	top: 0;
@@ -9002,7 +9032,6 @@ ul.drop-down {
 	position: relative;
 	-ms-touch-action: pan-Y;
 	touch-action: manipulation;
-	-moz-backface-visibility: hidden;
 	/* fix firefox animation glitch */
 }
 
@@ -9177,6 +9206,7 @@ ul.drop-down {
 	height: 10px;
 	background: transparent;
 	display: block;
+	backface-visibility: visible;
 	-webkit-backface-visibility: visible;
 	transition: opacity 200ms ease;
 	border-radius: 5px;
@@ -9585,31 +9615,6 @@ ul.drop-down {
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .floating-chat {
 	align-items: center;
 	justify-content: center;
@@ -9701,8 +9706,10 @@ ul.drop-down {
 	}
 }
 
-// Animation
-// --------------------------------------
+/*
+ * Animation
+ * --------------------------------------
+ */
 @keyframes show-chat-even {
 	0% {
 		margin-left: -480px;
@@ -9889,4 +9896,95 @@ ul.drop-down {
 .card-container a {
 	text-decoration: none;
 	color: #414141;
+}
+
+/*
+ * Contact form
+ */
+
+.app-form-group {
+	margin-bottom: 15px;
+}
+
+.app-form-group.message {
+	margin-top: 40px;
+}
+
+.app-form-group.buttons {
+	margin-bottom: 0;
+	text-align: right;
+}
+
+.app-form-control {
+	width: 100%;
+	padding: 10px 0;
+	background: none;
+	border: none;
+	border-bottom: 1px solid #d7dde5;
+	color: #fff;
+	font-size: 14px;
+	outline: none;
+	transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+	color: #d7dde5;
+}
+
+.app-form-control:focus {
+	border-bottom-color: var(--wh-green)
+}
+
+.form-button {
+	font-family: inherit;
+	font-size: 20px;
+	background: royalblue;
+	color: white;
+	padding: 0.2em 1em;
+	padding-left: 0.9em;
+	display: flex;
+	align-items: center;
+	border: none;
+	border-radius: 16px;
+	overflow: hidden;
+	transition: all 0.2s;
+	cursor: pointer;
+  }
+  
+.form-button span {
+	display: block;
+	margin-left: 0.3em;
+	transition: all 0.3s ease-in-out;
+}
+
+.form-button svg {
+	display: block;
+	transform-origin: center center;
+	transition: transform 0.3s ease-in-out;
+}
+
+.form-button:hover .svg-wrapper {
+	animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.form-button:hover svg {
+	transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.form-button:hover span {
+	transform: translateX(5em);
+}
+
+.form-button:active {
+	transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+	from {
+		transform: translateY(0.1em);
+	}
+
+	to {
+		transform: translateY(-0.1em);
+	}
 }
