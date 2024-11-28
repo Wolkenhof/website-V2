@@ -484,30 +484,26 @@ a:hover {
 }
 
 .color-a {
-	background: linear-gradient(
-        to right,
-        rgb(15, 101, 152),
-        rgb(15, 101, 152)
-      ),
-      linear-gradient(
-        to right,
-        rgb(51, 183, 13),
-        rgb(15, 101, 152)
-      );
-    background-size:
-      100% 3px,
-      0 3px;
-    background-position:
-      100% 100%,
-      0 100%;
-    background-repeat: no-repeat;
-    transition: background-size 400ms;
+	background: linear-gradient(to right,
+			rgb(15, 101, 152),
+			rgb(15, 101, 152)),
+		linear-gradient(to right,
+			rgb(51, 183, 13),
+			rgb(15, 101, 152));
+	background-size:
+		100% 3px,
+		0 3px;
+	background-position:
+		100% 100%,
+		0 100%;
+	background-repeat: no-repeat;
+	transition: background-size 400ms;
 }
 
 .color-a:hover {
 	background-size:
-	0 3px,
-	100% 3px;
+		0 3px,
+		100% 3px;
 }
 
 a[href*='tel'],
@@ -7914,48 +7910,11 @@ html.rd-navbar-fixed-linked .page {
 }
 
 
-
 /* Styling für das Dropdown-Menü */
 .rd-submenu {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-
-header.active ul.drop-down {
-	position: absolute;
-	top: 90%;
-	left: 0;
-	width: 220px;
-	visibility: hidden;
-	opacity: 0;
-	z-index: 3;
-	transition: all 0.17s ease-in-out;
-	-moz-transition: all 0.17s ease-in-out;
-	-webkit-transition: all 0.17s ease-in-out;
-	-o-transition: all 0.17s ease-in-out;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-o-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-webkit-transform-origin: 0 0;
-	-moz-transform-origin: 0 0;
-	-ms-transform-origin: 0 0;
-	-o-transform-origin: 0 0;
-	transform-origin: 0 0;
-	-webkit-transform: rotateX(-90deg);
-	-moz-transform: rotateX(-90deg);
-	-ms-transform: rotateX(-90deg);
-	-o-transform: rotateX(-90deg);
-	transform: rotateX(-90deg);
-	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
-	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
-	-mos-transition: -mos-transform 0.4s, opacity 0.1s 0.3s;
-	-o-transition: -o-transform 0.4s, opacity 0.1s 0.3s;
-}
-
-ul.drop-down {
 	position: absolute;
 	top: 0;
 	left: 2000;
@@ -8003,6 +7962,7 @@ ul.drop-down {
 .rd-nav-item.active a.active {
 	border-left: 2px solid #fff;
 }
+
 
 
 
@@ -10067,8 +10027,8 @@ ul.drop-down {
 	overflow: hidden;
 	transition: all 0.2s;
 	cursor: pointer;
-  }
-  
+}
+
 .form-button span {
 	display: block;
 	margin-left: 0.3em;
