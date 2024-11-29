@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Photo Highlight</title>
+    <style>
+        .team-container {
+            position: relative;
+            width: 1024px; /* Adjust to the image width */
+            height: 1024px; /* Adjust to the image height */
+            margin: 0 auto;
+            background-image: url('./d063b6e1-a7a1-4fb0-81ae-1920893fb390.webp'); /* Replace with your image file */
+            background-size: cover;
+            background-position: center;
+        }
+        .team-container:hover {
+            position: relative;
+            width: 1024px; /* Adjust to the image width */
+            height: 1024px; /* Adjust to the image height */
+            margin: 0 auto;
+            background-image: url('./PERSONENBG.webp'); /* Replace with your image file */
+            background-size: cover;
+            background-position: center;
+        }
+        .person {
+            position: absolute;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .person:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+        /* Positioning each person (adjust these based on the image) */
+        .person1 {
+            width: 1024px;
+            height: 1024px;
+            /* top: -100px;
+            left: -8px; */
+            background-image: url('./PERSON1.png');
+            background-size: cover;
+        }
+        .person2 {
+            width: 100px;
+            height: 100px;
+            top: 30%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+        }
+        .person3 {
+            width: 100px;
+            height: 100px;
+            top: 30%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+        }
+        .person4 {
+            width: 100px;
+            height: 100px;
+            top: 70%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+        }
+        .person5 {
+            width: 100px;
+            height: 100px;
+            top: 70%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="team-container">
+        <div class="person person1"></div>
+        <!-- <div class="person person2"></div>
+        <div class="person person3"></div>
+        <div class="person person4"></div>
+        <div class="person person5"></div> -->
+    </div>
+</body>
+</html>
