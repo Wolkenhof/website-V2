@@ -10055,6 +10055,10 @@ html.rd-navbar-fixed-linked .page {
 	cursor: pointer;
 }
 
+.GREENCLOUD .form-button {
+	background: #277a25;
+}
+
 .form-button span {
 	display: block;
 	margin-left: 0.3em;
@@ -10134,16 +10138,27 @@ html.rd-navbar-fixed-linked .page {
 	opacity: 1;
 	border-radius: 50%;
 }
+.GREENCLOUD .checkbox-wrapper-46 .cbx span:first-child:before {
+	background: #50ecab;
+}
 .checkbox-wrapper-46 .cbx span:last-child {
 	padding-left: 8px;
 }
 .checkbox-wrapper-46 .cbx:hover span:first-child {
 	border-color: #506EEC;
 }
+.GREENCLOUD .checkbox-wrapper-46 .cbx:hover span:first-child {
+	border-color: #50ecab;
+}
 
 .checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child {
 	background: #506EEC;
 	border-color: #506EEC;
+	animation: wave-46 0.4s ease;
+}
+.GREENCLOUD .checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child {
+	background: #50ecab;
+	border-color: #50ecab;
 	animation: wave-46 0.4s ease;
 }
 .checkbox-wrapper-46 .inp-cbx:checked + .cbx span:first-child svg {
