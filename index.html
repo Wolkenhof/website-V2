@@ -693,7 +693,7 @@
           </div>
           <div class="col-lg-4 wow fadeInLeft" data-wow-delay=".2s">
             <P class="footer-classic-title">Rückrufbitte</P>
-            <form id="contact-form" class="form-inline">
+            <form id="contact-form">
               <div class="screen-body-item">
                 <div class="app-form">
                   <div class="app-form-group">
@@ -703,15 +703,29 @@
                     <input class="app-form-control" name="phone" id="phone" placeholder="Rufnummer" required="required">
                   </div>
                   <div class="app-form-group">
-                    <input class="app-form-control" name="mail" id="mail" placeholder="E-Mail (optional)">
+                    <input class="app-form-control" name="mail" id="mail" placeholder="E-Mail">
                   </div>
                   <div class="app-form-group message">
                     <input class="app-form-control" name="comment" id="comment" placeholder="Nachricht" required="required">
                   </div>
                   <div class="app-form-group buttons">
                     <div class="submit-area">
-                      <input type="checkbox" required="required" name="datenschutz" id="datenschutz" value="gelesen"> <a
-                          href="/datenschutz" target="_blank"><strong style="color: #b3ddff;">Datenschutzerklärung</strong> </a><strong>gelesen</strong><br>
+                      <div class="checkbox-wrapper-46">
+                        <input class="inp-cbx" id="cbx-46" name="datenschutz" value="gelesen" type="checkbox"/>
+                        <label class="cbx" for="cbx-46">
+                        <span>
+                          <svg width="12px" height="10px" viewbox="0 0 12 10">
+                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                          </svg>
+                        </span>
+                        <span>
+                          <a href="/datenschutz" target="_blank">
+                            <strong style="color: #b3ddff;">Datenschutzerklärung</strong>
+                          </a>
+                          <strong> gelesen</strong>
+                        </span>
+                        </label>
+                      </div>
                       <button class="form-button" type="sumbit">
                         <div class="svg-wrapper-1">
                           <div class="svg-wrapper">
