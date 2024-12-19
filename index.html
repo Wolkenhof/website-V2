@@ -760,8 +760,7 @@
             Design
             by <a href="https://www.wolkenhof.com">Wolkenhof GmbH</a></p>
           <ul class="social-links">
-            <li><a class="fa fa-linkedin" href="#"></a></li>
-            <li><a class="fa fa fa-twitter" href="#"></a></li>
+            <li><a class="fa fa-linkedin" href="https://www.linkedin.com/company/wolkenhof/"></a></li>
             <li><a class="fa fa-facebook" href="#"></a></li>
             <li><a class="fa fa-instagram" href="#"></a></li>
           </ul>
@@ -776,8 +775,6 @@
     document.getElementById("contact-form").addEventListener("submit", function(event) {
         event.preventDefault(); // Prevent the form from submitting normally
         var formData = new FormData(this);
-        console.log("Got form data:")
-        console.log(formData)
         fetch("https://wolkenhof.com/api/form.php", {
             method: "POST",
             body: formData
