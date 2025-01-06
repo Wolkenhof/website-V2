@@ -10,11 +10,11 @@ header("Access-Control-Allow-Origin: *");
 //error_reporting(E_ALL);
 //ini_set('display_errors', 1);
 
-$version = "1.0-development1";
+$version = "1.0-development2";
 $errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $to = "info@wolkenhof.com";
+  $to = "jgu@wolkenhof.com";
   $from = $_POST['mail'];
   $name = $_POST['name'];
   $tel = $_POST['phone'];
