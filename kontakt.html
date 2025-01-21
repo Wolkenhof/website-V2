@@ -9,6 +9,7 @@
   <link rel="icon" href="/images/favicon-96x96.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css"
     href="//fonts.googleapis.com/css?family=Montserrat:300,400,700%7CPoppins:300,400,500,700,900">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/style.css">
@@ -27,6 +28,32 @@
     html.ie-10 .ie-panel,
     html.lt-ie-10 .ie-panel {
       display: block;
+    }
+  </style>
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+    .card h3 {
+      font-size: 18px;
+      color: #333;
+      margin: 0 0 0px;
+    }
+    .card p {
+      margin: 5px 0;
+      color: #555;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -141,75 +168,85 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-8 text-center">
-            <h1 class="font-weight-bold wow fadeInLeft">Impressum</h1>
+            <h1 class="font-weight-bold wow fadeInLeft">Kontakt</h1>
           </div>
         </div>
       </div>
     </section>
-    <!--Impressum-->
-    <section class="section section-lg bg-default">
+    <!--Kontakt-->
+    <section class="section section-md">
       <div class="container">
-        <article>
-          <div>
-            <h4><strong>Unternehmensangaben</strong></h4>
-            <h5>nach § 5 Telemediengesetz (TMG) und §§ 2,3 Dienstleistungs-Informationspflichten-Verordnung (DL-InfoV)</h5>
+        <div class="card">
+          <h3>WOLKENHOF GmbH</h3>
+          <p style="margin: 0; line-height: 1.5;">
+            <span>Hauptgeschäftssitz</span>
             <br>
-            <p style="margin: 0; line-height: 1.4;" class="a-color-override"><strong>wolkenhof GmbH</strong>
-              <br>
-              Schillerstraße 13b, 29525 Uelzen
-              <br>
-              Telefon: +49 (581) 9036-0
-              <br>
-              Telefax: +49 581 9036-36
-              <br>
-              E-Mail: info@wolkenhof.com
-              <br>
-              Internet: www.wolkenhof.com
-            </p>
-            <br>
-            <p style="margin: 0; line-height: 1.4;"><strong>Geschäftsführer:</strong> 
-              <br>
-              Nikolai Hofmeister
-              <br>
-              Amtsgericht Lüneburg HRB 120618
-              <br>
-              Ust ID gemäß § 27a UstG: DE116680814
-            </p>
-            <br>
-            <p style="margin: 0; line-height: 1.4;">
-              <strong>Information nach dem Verbraucherstreitbeilegungsgesetz (VSBG):</strong>
-              <br>
-              Zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle sind wir nicht
-              verpflichtet und nicht bereit. Plattform der Europäischen Kommission http://ec.europa.eu/consumers/odr/
-            </p>
-            <br>
-            <p style="margin: 0; line-height: 1.4;">
-              <strong>Quellenangaben / Urheberrechte:</strong>
-              <br>
-              © Lorem Ipsum, <a href="https://example.com" class="color-a-black" target="_blank" alt="Lorem ipsum">example.com</a>
-              <br>
-              © Lorem Ipsum, <a href="https://example.com" class="color-a-black" target="_blank" alt="Lorem ipsum">example.com</a>
-            </p>
-            <br>
-            <p style="margin: 0; line-height: 1.4;">
-              <strong>AGB - Allgemeine Geschäftsbedingungen:</strong>
-              <br>
-              Alle Rechte vorbehalten. Alle Inhalte dieser Website unterliegen den folgenden Nutzungsbedingungen: Die
-              Angaben auf dieser Website erfolgen nur zu allgemeinen Informationszwecken. Wir haben die Inhalte dieser
-              Seite sorgfältig geprüft, übernehmen jedoch keinerlei Garantie oder Gewähr für die Richtigkeit,
-              Vollständigkeit und Aktualität der angebotenen Informationen. Die Inhalte externer Websites, die über
-              Hyperlinks von dieser Seite aus erreicht werden können oder die auf diese Seite verweisen, sind fremde
-              Inhalte, auf die wir keinen Einfluss haben und für die wir keinerlei Gewähr übernehmen.
-              <br>
-              <br>
-              Der Inhalt dieser Website ist urheberrechtlich geschützt. Soweit nicht nachstehend erlaubt, ist die
-              Wiedergabe von Inhalten verboten. Sie dürfen Auszüge dieser Website für Ihren privaten Gebrauch auf eine
-              lokale Festplatte herunterladen oder drucken. Sie dürfen Kopien der Auszüge dieser Website auch an Dritte
-              zum privaten Gebrauch weitergeben, sofern Sie unser Copyright anerkennen. Jede kommerzielle
-              Vervielfältigung oder Verbreitung ist untersagt.
-            </p>
+            <span>IT-Abteilung, Greencloud</span>
+          </p>
+          <div class="icon-row">
+            <i class="fa fa-home"></i>
+            <span>Schillerstraße 13b, 29525 Uelzen</span>
           </div>
-        </article>
+          <div class="icon-row">
+            <i class="fa fa-phone"></i>
+            <a class="a-color-override" href="tel:+4958190360">+49 581 9036-0</a>
+          </div>
+          <div class="icon-row">
+            <i class="fa fa-envelope"></i>
+            <a class="a-color-override" href="mailto:info@wolkenhof.com">info@wolkenhof.com</a>
+          </div>
+        </div>  
+        <div class="card">
+          <h3>WOLKENHOF GmbH</h3>
+          <p>Office-Abteilung</p>
+          <br>
+          <div class="icon-row">
+            <i class="fa fa-home"></i>
+            <span>Schillerstraße 13b, 29525 Uelzen</span>
+          </div>
+          <div class="icon-row">
+            <i class="fa fa-phone"></i>
+            <a class="a-color-override" href="tel:+4958190360">+49 581 9036-0</a>
+          </div>
+          <div class="icon-row">
+            <i class="fa fa-envelope"></i>
+            <a class="a-color-override" href="mailto:info@wolkenhof.com">info@wolkenhof.com</a>
+          </div>
+        </div>  
+        <div class="card">
+          <h3>WOLKENHOF GmbH</h3>
+          <p>Hauptgeschäftssitz</p>
+          <p>IT-Abteilung, Greencloud</p>
+          <div class="icon-row">
+            <i class="fa fa-home"></i>
+            <span>Schillerstraße 13b, 29525 Uelzen</span>
+          </div>
+          <div class="icon-row">
+            <i class="fa fa-phone"></i>
+            <a class="a-color-override" href="tel:+4958190360">+49 581 9036-0</a>
+          </div>
+          <div class="icon-row">
+            <i class="fa fa-envelope"></i>
+            <a class="a-color-override" href="mailto:info@wolkenhof.com">info@wolkenhof.com</a>
+          </div>
+        </div>  
+        <div class="card">
+          <h3>WOLKENHOF GmbH</h3>
+          <p>Hauptgeschäftssitz</p>
+          <p>IT-Abteilung, Greencloud</p>
+          <div class="icon-row">
+            <i class="fa fa-home"></i>
+            <span>Schillerstraße 13b, 29525 Uelzen</span>
+          </div>
+          <div class="icon-row">
+            <i class="fa fa-phone"></i>
+            <a class="a-color-override" href="tel:+4958190360">+49 581 9036-0</a>
+          </div>
+          <div class="icon-row">
+            <i class="fa fa-envelope"></i>
+            <a class="a-color-override" href="mailto:info@wolkenhof.com">info@wolkenhof.com</a>
+          </div>
+        </div>       
       </div>
     </section>
     <footer class="section footer-classic section-sm">
