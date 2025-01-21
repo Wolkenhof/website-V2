@@ -487,6 +487,10 @@ a:hover {
 	color: #aab2b9;
 }
 
+.a-color-override {
+	color: #000 !important;
+}
+
 .color-a {
 	background: linear-gradient(to right,
 			rgb(15, 101, 152),
@@ -504,10 +508,29 @@ a:hover {
 	transition: background-size 400ms;
 }
 
+.color-a-black:hover,
 .color-a:hover {
 	background-size:
 		0 3px,
 		100% 3px;
+}
+
+.color-a-black {
+	background: linear-gradient(to right,
+			rgb(15, 101, 152),
+			rgb(15, 101, 152)),
+		linear-gradient(to right,
+			rgb(51, 183, 13),
+			rgb(15, 101, 152));
+	background-size:
+		100% 3px,
+		0 3px;
+	background-position:
+		100% 100%,
+		0 100%;
+	background-repeat: no-repeat;
+	transition: background-size 400ms;
+	color: #000 !important
 }
 
 a[href*='tel'],
