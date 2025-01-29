@@ -74,7 +74,7 @@
 }
 
 a {
-	color: #fff !important;
+	color: #ffffff;
 }
 
 a:focus,
@@ -1923,7 +1923,7 @@ hr {
 	font-size: 14px;
 	line-height: 1.25;
 	border: 1px solid;
-	font-family: "Poppins", sans-serif;
+	font-family: "Poppins";
 	font-weight: 700;
 	letter-spacing: 0.23em;
 	text-transform: uppercase;
@@ -4270,7 +4270,7 @@ textarea.form-input {
 .footer-classic {
 	padding: 30px 0;
 	background: var(--wh-blue);
-	color: #eef6f6;
+	color: #ffffff !important;
 	font-size: 16px;
 }
 
@@ -10476,8 +10476,7 @@ html.rd-navbar-fixed-linked .page {
 }
 
 .standorte {
-	height: 420px;
-	background-color: white;
+	height: 250px;
 	transition: background-color 0.8s ease;
 }
 
@@ -10744,6 +10743,39 @@ html.rd-navbar-fixed-linked .page {
 	margin-top: 5px;
 }
 
+.contact-button {
+	font-size: 100px;
+	border-color: #00000000;
+	box-shadow: 3px 3px 10px -1px var(--wh-green);
+	color: #fff;
+	width: 30%;
+	text-align: center;
+	height: 150px;
+	line-height: 150px;
+	border-radius: 40px;
+	background-color: var(--wh-blue);
+	transition: 250ms all ease-in-out;
+}
+
+.contact-button:hover {
+	box-shadow: 3px 3px 10px -1px var(--wh-blue);
+	background-color: var(--wh-green);
+	cursor: pointer;
+}
+
+.contact-icon {
+	color: #fff;
+}
+
+.contact-icon:hover {
+	color: #fff;
+}
+
+i {
+	font-style: normal !important;
+}
+
+
 @media (max-width: 767px) {
 	ul.timeline:before {
 		left: 40px;
@@ -10784,7 +10816,10 @@ html.rd-navbar-fixed-linked .page {
 	padding-right: 20px;
 }
 
-
+.standorte {
+	text-align: center;
+	color: #000000 !important;
+}
 
 /* ###### MOBILE ###### */
 
@@ -10842,10 +10877,6 @@ html.rd-navbar-fixed-linked .page {
 	.brand-logo-light {
 		width: 90% !important;
 		margin-left: 5% !important;
-	}
-
-	a {
-		color: #fff;
 	}
 
 	.button-way-point {
