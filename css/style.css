@@ -5730,7 +5730,7 @@ html [class*='section-'].section-bottom-0 {
 * Light Backgrounds
 */
 .bg-default {
-	background-color: #ffffff;
+	background-color: #FAFAFA;
 }
 
 .bg-default:not([style*="background-"])+.bg-default:not([style*="background-"]) {
@@ -10752,6 +10752,10 @@ i {
 	font-style: normal !important;
 }
 
+.centered {
+	text-align: center;
+	padding-top: 20px;
+}
 
 @media (max-width: 767px) {
 	ul.timeline:before {
@@ -10864,6 +10868,38 @@ i {
 		visibility: hidden;
 		height: 0px;
 	}
+
+	.team-hover-gc {
+		visibility: hidden;
+	}
+
+	.person {
+		background-color: transparent;
+	}
+
+	.person:hover {
+		background-color: #00000000;
+	}
+
+	.team-person-gc {
+		visibility: hidden;
+	}
+
+	.teamleiter-text {
+		margin-top: -100%;
+	}
+
+	.logo-slider::before,
+	.logo-slider::after {
+		background: -webkit-gradient(linear, left top, right top, from(#FAFAFA), to(rgba(255, 255, 255, 0)));
+		background: linear-gradient(to right, #FAFAFA 0%, rgba(255, 255, 255, 0) 100%);
+		content: "";
+		height: 150px;
+		position: absolute;
+		width: 50px;
+		z-index: 2;
+	}
+
 }
 
 .dse {
