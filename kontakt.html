@@ -2,16 +2,18 @@
 <html class="wide wow-animation" lang="en">
 
 <head>
-  <title>Wolkenhof - Impressum</title>
+  <title>Wolkenhof - Kontakt</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" href="/images/favicon-96x96.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css"
     href="//fonts.googleapis.com/css?family=Montserrat:300,400,700%7CPoppins:300,400,500,700,900">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/bootstrap.css">
   <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link href="/css/leaflet.css" rel="stylesheet"/>
   <style>
     .ie-panel {
       display: none;
@@ -27,6 +29,32 @@
     html.ie-10 .ie-panel,
     html.lt-ie-10 .ie-panel {
       display: block;
+    }
+  </style>
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+    .card h3 {
+      font-size: 18px;
+      color: #333;
+      margin: 0 0 0px;
+    }
+    .card p {
+      margin: 5px 0;
+      color: #555;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -141,76 +169,184 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-8 text-center">
-            <h1 class="font-weight-bold wow fadeInLeft">Impressum</h1>
+            <h1 class="font-weight-bold wow fadeInLeft">Kontakt</h1>
           </div>
         </div>
       </div>
     </section>
-    <!--Impressum-->
-    <section class="section section-lg bg-default">
-      <div class="container">
-        <article>
-          <div>
-            <h4><strong>Unternehmensangaben</strong></h4>
-            <h5>nach § 5 Telemediengesetz (TMG) und §§ 2,3 Dienstleistungs-Informationspflichten-Verordnung (DL-InfoV)</h5>
-            <br>
-            <p style="margin: 0; line-height: 1.4;" class="a-color-override"><strong>wolkenhof GmbH</strong>
-              <br>
-              Schillerstraße 13b, 29525 Uelzen
-              <br>
-              Telefon: +49 (581) 9036-0
-              <br>
-              Telefax: +49 581 9036-36
-              <br>
-              E-Mail: info@wolkenhof.com
-              <br>
-              Internet: www.wolkenhof.com
-            </p>
-            <br>
-            <p style="margin: 0; line-height: 1.4;"><strong>Geschäftsführer:</strong> 
-              <br>
-              Nikolai Hofmeister
-              <br>
-              Amtsgericht Lüneburg HRB 120618
-              <br>
-              Ust ID gemäß § 27a UstG: DE116680814
-            </p>
-            <br>
-            <p style="margin: 0; line-height: 1.4;">
-              <strong>Information nach dem Verbraucherstreitbeilegungsgesetz (VSBG):</strong>
-              <br>
-              Zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle sind wir nicht
-              verpflichtet und nicht bereit. Plattform der Europäischen Kommission http://ec.europa.eu/consumers/odr/
-            </p>
-            <br>
-            <p style="margin: 0; line-height: 1.4;">
-              <strong>Quellenangaben / Urheberrechte:</strong>
-              <br>
-              © Lorem Ipsum, <a href="https://example.com" class="color-a-black" target="_blank" alt="Lorem ipsum">example.com</a>
-              <br>
-              © Lorem Ipsum, <a href="https://example.com" class="color-a-black" target="_blank" alt="Lorem ipsum">example.com</a>
-            </p>
-            <br>
-            <p style="margin: 0; line-height: 1.4;">
-              <strong>AGB - Allgemeine Geschäftsbedingungen:</strong>
-              <br>
-              Alle Rechte vorbehalten. Alle Inhalte dieser Website unterliegen den folgenden Nutzungsbedingungen: Die
-              Angaben auf dieser Website erfolgen nur zu allgemeinen Informationszwecken. Wir haben die Inhalte dieser
-              Seite sorgfältig geprüft, übernehmen jedoch keinerlei Garantie oder Gewähr für die Richtigkeit,
-              Vollständigkeit und Aktualität der angebotenen Informationen. Die Inhalte externer Websites, die über
-              Hyperlinks von dieser Seite aus erreicht werden können oder die auf diese Seite verweisen, sind fremde
-              Inhalte, auf die wir keinen Einfluss haben und für die wir keinerlei Gewähr übernehmen.
-              <br>
-              <br>
-              Der Inhalt dieser Website ist urheberrechtlich geschützt. Soweit nicht nachstehend erlaubt, ist die
-              Wiedergabe von Inhalten verboten. Sie dürfen Auszüge dieser Website für Ihren privaten Gebrauch auf eine
-              lokale Festplatte herunterladen oder drucken. Sie dürfen Kopien der Auszüge dieser Website auch an Dritte
-              zum privaten Gebrauch weitergeben, sofern Sie unser Copyright anerkennen. Jede kommerzielle
-              Vervielfältigung oder Verbreitung ist untersagt.
-            </p>
+    <!--Kontakt-->
+    <section class="section section-md">
+      <div>
+        <h2 class="container"><strong>Unsere Standorte</strong></h2>
+        <div class="container">
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <!-- Erster Bereich -->
+            <div style="flex: 1; margin-bottom: 15px;">
+              <h3>WOLKENHOF GmbH</h3>
+              <p style="margin: 0; line-height: 1.5;">
+                <span>Hauptgeschäftssitz</span>
+                <br>
+                <span>IT-Abteilung, Greencloud</span>
+              </p>
+            </div>
+            
+            <!-- Zweiter Bereich -->
+            <div style="margin-top: auto;">
+              <div class="icon-row" style="align-items: center; gap: 5px;">
+                <i class="fa fa-home" style="color: #555;"></i>
+                <span>Schillerstraße 13b, 29525 Uelzen</span>
+              </div>
+              <div class="icon-row" style="align-items: center; gap: 5px;">
+                <i class="fa fa-phone" style="color: #555;"></i>
+                <a class="a-color-override" href="tel:+4958190360" style="text-decoration: none; color: #007bff;">+49 581 9036-0</a>
+              </div>
+              <div class="icon-row" style="align-items: center; gap: 5px;">
+                <i class="fa fa-envelope" style="color: #555;"></i>
+                <a class="a-color-override" href="mailto:info@wolkenhof.com" style="text-decoration: none; color: #007bff;">info@wolkenhof.com</a>
+              </div>
+            </div>
+          </div>  
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <!-- Erster Bereich -->
+            <div style="flex: 1; margin-bottom: 15px;">
+              <h3>WOLKENHOF GmbH</h3>
+              <p style="margin: 0; line-height: 1.5;">
+                <span>Office-Abteilung</span>
+              </p>
+            </div>
+            
+            <!-- Zweiter Bereich -->
+            <div style="margin-top: auto;">
+              <div class="icon-row" style="align-items: center; gap: 5px;">
+                <i class="fa fa-home" style="color: #555;"></i>
+                <span>Klosterstraße 1, 29525 Uelzen</span>
+              </div>
+              <div class="icon-row" style="align-items: center; gap: 5px;">
+                <i class="fa fa-phone" style="color: #555;"></i>
+                <a class="a-color-override" href="tel:+4958190360" style="text-decoration: none; color: #007bff;">+49 581 9036-0</a>
+              </div>
+              <div class="icon-row" style="align-items: center; gap: 5px;">
+                <i class="fa fa-envelope" style="color: #555;"></i>
+                <a class="a-color-override" href="mailto:info@wolkenhof.com" style="text-decoration: none; color: #007bff;">info@wolkenhof.com</a>
+              </div>
+            </div>
           </div>
-        </article>
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <!-- Erster Bereich -->
+            <div style="flex: 1; margin-bottom: 15px;">
+              <h3>WOLKENHOF GmbH</h3>
+              <p style="margin: 0; line-height: 1.5;">
+                <span>Technischer Standort</span>
+              </p>
+            </div>
+            
+            <!-- Zweiter Bereich -->
+            <div style="margin-top: auto;">
+              <div class="icon-row" style="align-items: center; gap: 5px;">
+                <i class="fa fa-home" style="color: #555;"></i>
+                <span>Tempelhofer Weg 10, 21502 Geesthacht</span>
+              </div>
+              <div class="icon-row" style="align-items: center; gap: 5px;">
+                <i class="fa fa-phone" style="color: #555;"></i>
+                <a class="a-color-override" href="tel:+4958190360" style="text-decoration: none; color: #007bff;">+49 581 9036-0</a>
+              </div>
+              <div class="icon-row" style="align-items: center; gap: 5px;">
+                <i class="fa fa-envelope" style="color: #555;"></i>
+                <a class="a-color-override" href="mailto:info@wolkenhof.com" style="text-decoration: none; color: #007bff;">info@wolkenhof.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <!-- Erster Bereich -->
+            <div style="flex: 1; margin-bottom: 15px;">
+              <h3>WOLKENHOF GmbH</h3>
+              <p style="margin: 0; line-height: 1.5;">
+                <span>Standort Bremen</span>
+              </p>
+            </div>
+            
+            <!-- Zweiter Bereich -->
+            <div style="margin-top: auto;">
+              <div class="icon-row" style="align-items: center; gap: 5px;">
+                <i class="fa fa-home" style="color: #555;"></i>
+                <span>Kleiner Ort 9-11, 28357 Bremen</span>
+              </div>
+              <div class="icon-row" style="align-items: center; gap: 5px;">
+                <i class="fa fa-phone" style="color: #555;"></i>
+                <a class="a-color-override" href="tel:+4958190360" style="text-decoration: none; color: #007bff;">+49 581 9036-0</a>
+              </div>
+              <div class="icon-row" style="align-items: center; gap: 5px;">
+                <i class="fa fa-envelope" style="color: #555;"></i>
+                <a class="a-color-override" href="mailto:info@wolkenhof.com" style="text-decoration: none; color: #007bff;">info@wolkenhof.com</a>
+              </div>
+            </div>
+          </div>    
+        </div>
       </div>
+    </section>
+    <section class="section section-md">
+      <div class="container">
+         <!-- OSM Map -->
+         <div id="osm-map"></div>
+      </div>  
+    </section>
+    <section class="section section-md">
+      <div class="container">
+        <h4 class="footer-classic-title">Rückrufbitte</h4>
+        <form id="contact-form">
+          <div class="screen-body-item">
+            <div class="app-form">
+              <div class="app-form-group">
+                <input class="app-form-control" name="name" id="name" placeholder="Name" required="required">
+              </div>
+              <div class="app-form-group">
+                <input class="app-form-control" name="phone" id="phone" placeholder="Rufnummer" required="required">
+              </div>
+              <div class="app-form-group">
+                <input class="app-form-control" name="mail" id="mail" placeholder="E-Mail">
+              </div>
+              <div class="app-form-group message">
+                <input class="app-form-control" name="comment" id="comment" placeholder="Nachricht"
+                  required="required">
+              </div>
+              <div class="app-form-group buttons">
+                <div class="submit-area">
+                  <div class="checkbox-wrapper-46">
+                    <input class="inp-cbx" id="cbx-46" name="datenschutz" value="gelesen" type="checkbox" />
+                    <label class="cbx" for="cbx-46">
+                      <span>
+                        <svg width="12px" height="10px" viewbox="0 0 12 10">
+                          <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                        </svg>
+                      </span>
+                      <span>
+                        <a href="/datenschutz" target="_blank">
+                          <strong style="color: #b3ddff;">Datenschutzerklärung</strong>
+                        </a>
+                        <strong> gelesen</strong>
+                      </span>
+                    </label>
+                  </div>
+                  <button class="form-button" type="sumbit">
+                    <div class="svg-wrapper-1">
+                      <div class="svg-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                          <path fill="none" d="M0 0h24v24H0z"></path>
+                          <path fill="currentColor"
+                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                          </path>
+                        </svg>
+                      </div>
+                    </div>
+                    <span>Senden</span>
+                  </button>
+                  <div id="form-status"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>  
     </section>
     <footer class="section footer-classic section-sm">
       <div class="container">
@@ -229,8 +365,8 @@
           <div class="col-lg-3 col-sm-8 wow fadeInUp">
             <P class="footer-classic-title">Kontakt</P>
             <div class="d-block offset-top-0">Schillerstraße 13b<span class="d-lg-block">29525 Uelzen</span></div>
-            <a class="d-inline-block color-a" href="mailto:#" style="color: #fff;">info@wolkenhof.com</a><a class="d-inline-block color-a"
-              href="tel:#" style="color: #fff;">+49 581 9036-0
+            <a class="d-inline-block color-a" href="mailto:#">info@wolkenhof.com</a><a class="d-inline-block color-a"
+              href="tel:#">+49 581 9036-0
             </a>
             <ul>
               <li>Mo-Fr:<span class="d-inline-block offset-left-10 text-white">8:00 - 17:00</span></li>
@@ -278,7 +414,7 @@
                             </svg>
                           </span>
                           <span>
-                            <a href="/datenschutz.html" target="_blank">
+                            <a href="/datenschutz" target="_blank">
                               <strong style="color: #b3ddff;">Datenschutzerklärung</strong>
                             </a>
                             <strong> gelesen</strong>
@@ -324,6 +460,20 @@
   <div class="snackbars" id="form-output-global"></div>
   <script src="/js/core.min.js"></script>
   <script src="/js/script.js"></script>
+  <script src="/js/leaflet.js"></script>
+  <script>
+    var element = document.getElementById('osm-map');
+    element.style = 'height:400px;z-index:30';
+
+    var map = L.map(element);
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a class="a-color-override" href="http://osm.org/copyright">OpenStreetMap</a> Mitwirkende'
+    }).addTo(map);
+
+    var target = L.latLng('52.9683259', '10.5574838');
+    map.setView(target, 18);
+    L.marker(target).addTo(map);
+  </script>
 </body>
 
 </html>

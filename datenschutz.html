@@ -2,7 +2,7 @@
 <html class="wide wow-animation" lang="en">
 
 <head>
-    <title>Typography</title>
+    <title>Wolkenhof - Datenschutzerklärung</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,6 +27,44 @@
         html.ie-10 .ie-panel,
         html.lt-ie-10 .ie-panel {
             display: block;
+        }
+
+        .dse h1,
+        .dse h2 {
+            font-size: 22px;
+            padding-top: 20px;
+        }
+
+        .title {
+            font-size: 32px;
+        }
+
+        .dse a {
+            color: #000 !important;
+            background: linear-gradient(to right,
+                    rgb(15, 101, 152),
+                    rgb(15, 101, 152)),
+                linear-gradient(to right,
+                    rgb(51, 183, 13),
+                    rgb(15, 101, 152));
+            background-size:
+                100% 3px,
+                0 3px;
+            background-position:
+                100% 100%,
+                0 100%;
+            background-repeat: no-repeat;
+            transition: background-size 400ms;
+        }
+        .dse a:hover,
+        .dse a:hover {
+            background-size:
+                0 3px,
+                100% 3px;
+        }
+
+        .dse li {
+            padding-top: 30px;
         }
     </style>
 </head>
@@ -100,7 +138,7 @@
                                         <li class="rd-nav-item active">
                                             <a class="rd-nav-link" href="./kontakt.html">Kontakt</a>
                                             <ul class="rd-submenu">
-                                                <li><a href="/impressum">Impressum</a></li>
+                                                <li><a href="/impressum.html">Impressum</a></li>
                                                 <li><a href="./datenschutz.html">Datenschutz</a></li>
                                                 <li><a href="./agb.html">AGB</a></li>
                                             </ul>
@@ -140,12 +178,12 @@
 
         <section class="section section-intro context-dark">
             <div class="intro-bg"
-                style="background: url(/images/neuer-standort.jpg) no-repeat;background-size:cover;background-position: top center;">
+                style="background: url(/images/neuer-standort.jpg) no-repeat;background-size:cover;background-position: center;">
             </div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-8 text-center">
-                        <h1 class="font-weight-bold wow fadeInLeft">Datenschutzerklärung</h1>
+                        <h1 class="font-weight-bold wow fadeInLeft title">Datenschutzerklärung</h1>
                     </div>
                 </div>
             </div>
@@ -153,10 +191,10 @@
 
         <!--Datenschutzerklärung-->
         <section class="section section-lg bg-default dse">
-            <script async data-policy="65b7adc75713b"
-                src="https://dsb.wolkenhof.com/media/public/ajax-widget.min.js?v=1.1.7"></script><noscript><a
-                    href="https://dsb.wolkenhof.com/policy/65b7adc75713b" target="_blank"
-                    rel="noopener noreferrer">Datenschutzerklärung</a></noscript>
+            <script async data-policy="65b7adc75713b" src="https://dsb.wolkenhof.com/media/public/ajax-widget.min.js?v=1.1.7"></script>
+            <noscript>
+                <a href="https://dsb.wolkenhof.com/policy/65b7adc75713b" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a>
+            </noscript>
         </section>
 
         <footer class="section footer-classic section-sm">
