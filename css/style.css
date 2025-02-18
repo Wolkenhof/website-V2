@@ -10825,6 +10825,16 @@ i {
 	color: #000000 !important;
 }
 
+.blockquote-blockquote {
+	margin-left: 50px;
+	margin-top: 40px;
+}
+
+.blockquote-name {
+	text-align: right;
+	margin-right: 70px;
+}
+
 /* ###### MOBILE ###### */
 
 .bg-mobile-menu {
@@ -10843,6 +10853,16 @@ i {
 @media screen and (max-width: 991px) {
 	.floating-chat {
 		visibility: hidden;
+	}
+
+	.blockquote-blockquote {
+		margin-left: 20px;
+		margin-top: 40px;
+	}
+
+	.blockquote-name {
+		text-align: right;
+		margin-right: 20px;
 	}
 
 	.main-section {
@@ -10921,6 +10941,19 @@ i {
 		position: absolute;
 		width: 50px;
 		z-index: 2;
+	}
+
+	.quote-container .quote p:first-child:before {
+		content: '\201C';
+		color: rgba(0, 0, 0, 0.295);
+		font-size: 12em;
+		font-weight: 700;
+		opacity: 1;
+		position: absolute;
+		top: -.7em;
+		left: -.2em;
+		text-shadow: none;
+		z-index: -10;
 	}
 
 }
