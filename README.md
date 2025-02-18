@@ -14,28 +14,27 @@ Dies ist die zweite Version der Website. Diese Version enthält mehrere Verbesse
 Die Projektstruktur ist wie folgt:
 
 .vscode/
-    settings.json
+  settings.json
 about.html
 agb.html
 api/
-    form.php
+  form.php
 bat/
-    phpmailer/
-    rd-mailform.config.json
-    rd-mailform.php
-    rd-mailform.tpl
-    rd-search.php
-    ReCaptcha/
-    reCaptcha.php
+  phpmailer/
+  rd-mailform.config.json
+  rd-mailform.php
+  rd-mailform.tpl
+  rd-search.php
+  ReCaptcha/
+  reCaptcha.php
 CNAME
 contacts.html
 css/
-    bootstrap.css
-    fonts.css
-    images/
-    leaflet.css
-    snippet-styles.css
-    ...
+  bootstrap.css
+  fonts.css
+  images/
+  leaflet.css
+  snippet-styles.css
 datenschutz.html
 fonts/
 images/
