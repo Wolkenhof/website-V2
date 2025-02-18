@@ -93,8 +93,8 @@ Die Projektstruktur ist wie folgt:
     </div>
 
 ## Autoren
-Adrian Preiß - Wolkenhof GmbH - Initialarbeit
-Christopher Schulz - Wolkenhof GmbH - Redaktionales
-Jonas Günner - Wolkenhof GmbH - Backend Coding
+Adrian Preiß - Wolkenhof GmbH - Initialarbeit\
+Christopher Schulz - Wolkenhof GmbH - Redaktionales\
+Jonas Günner - Wolkenhof GmbH - Backend Coding\
 
 ## Lizenz
