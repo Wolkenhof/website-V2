@@ -75,7 +75,7 @@ Die Projektstruktur ist wie folgt:
 ├── leistungen-office.html\
 ├── netzwerk.html\
 ├── typography.html\
-└── ueber-uns.html\
+└── ueber-uns.html
 
 ## Farben
 
@@ -95,6 +95,6 @@ Die Projektstruktur ist wie folgt:
 ## Autoren
 Adrian Preiß - Wolkenhof GmbH - Initialarbeit\
 Christopher Schulz - Wolkenhof GmbH - Redaktionales\
-Jonas Günner - Wolkenhof GmbH - Backend Coding\
+Jonas Günner - Wolkenhof GmbH - Backend Coding
 
 ## Lizenz
