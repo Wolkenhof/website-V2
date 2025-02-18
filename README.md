@@ -13,7 +13,7 @@ Dies ist die zweite Version der Website. Diese Version enthält mehrere Verbesse
 ## Projektstruktur
 Die Projektstruktur ist wie folgt:
 
-.
+.\
 ├── CNAME\
 ├── README.md\
 ├── TEMPLATE.html\
