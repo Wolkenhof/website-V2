@@ -10,7 +10,7 @@
 ## Einführung
 Dies ist die zweite Version der Website. Diese Version enthält mehrere Verbesserungen und neue Funktionen.
 
-Projektstruktur
+## Projektstruktur
 Die Projektstruktur ist wie folgt:
 
 .vscode/
