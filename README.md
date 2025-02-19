@@ -84,9 +84,9 @@ Die Projektstruktur ist wie folgt:
 | Farbe | Hex Code |
 | ----- | ----- |
 | ![Primary Color](https://img.shields.io/badge/Primary%20Color-056598) | ```#056598``` |
-| ![Secondary Color](https://img.shields.io/badge/Primary%20Color-39AA34) | ```#39AA34``` |
-| ![Accent Color](https://img.shields.io/badge/Primary%20Color-EBEBEB) | ```#EBEBEB``` |
-| ![Background Color](https://img.shields.io/badge/Primary%20Color-fafafa) | ```#fafafa``` |
+| ![Secondary Color](https://img.shields.io/badge/Secondary%20Color-39AA34) | ```#39AA34``` |
+| ![Accent Color](https://img.shields.io/badge/Accent%20Color-EBEBEB) | ```#EBEBEB``` |
+| ![Background Color](https://img.shields.io/badge/Background%20Color-fafafa) | ```#fafafa``` |
 
 
 ## Autoren
