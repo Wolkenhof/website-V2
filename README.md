@@ -44,7 +44,7 @@ Die Projektstruktur ist wie folgt:
 │ ├── rd-mailform.tpl\
 │ ├── rd-search.php\
 │ └── reCaptcha.php\
-├── contacts.html\
+├── kontakt.html\
 ├── css\
 │ ├── bootstrap.css\
 │ ├── fonts.css\
