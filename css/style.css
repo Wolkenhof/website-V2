@@ -1943,6 +1943,10 @@ hr {
 	min-width: 190px;
 }
 
+.button-width-250 {
+	min-width: 250px;
+}
+
 .button-190 {
 	min-width: 190px;
 	padding: 17px 35px;
@@ -9669,6 +9673,22 @@ html.rd-navbar-fixed-linked .page {
 	padding: 20px;
 }
 
+.logo-slider .portrait {
+	width: 400px;
+	padding: 5px;
+}
+
+.logo-slider .portrait-slide-track {
+	-webkit-animation: logo-scroll 60s linear infinite;
+	animation: logo-scroll 60s linear infinite;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: calc(250px * 35);
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+}
+
 @-webkit-keyframes logo-scroll {
 	0% {
 		-webkit-transform: translateX(0);
@@ -9692,6 +9712,9 @@ html.rd-navbar-fixed-linked .page {
 		transform: translateX(calc(-250px * 7));
 	}
 }
+
+
+
 
 .floating-chat {
 	align-items: center;
