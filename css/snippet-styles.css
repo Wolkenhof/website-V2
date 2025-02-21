@@ -96,7 +96,7 @@
 
 .parallax-card__side--back {
   transform: rotateY(180deg);
-  background: linear-gradient(to right bottom, #056598, #39AA34);
+  background: #EBEBEB;
 }
 
 /* Animation beim Hover */
