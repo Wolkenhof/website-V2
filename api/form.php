@@ -14,13 +14,13 @@ $version = "1.0-development2";
 $errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $to = "jgu@wolkenhof.com";
+  $to = "jgu@Wolkenhof.com";
   $from = $_POST['mail'];
   $name = $_POST['name'];
   $tel = $_POST['phone'];
   $datenschutz = $_POST['datenschutz'];
   $comment = $_POST['comment'];
-  $subject = "wolkenhof Kontaktformular: Von " . $name . "";
+  $subject = "Wolkenhof Kontaktformular: Von " . $name . "";
   $message = '
   <!DOCTYPE html>
 	<html
@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="x-apple-disable-message-reformatting" />
-		<title>wolkenhof: Neue Nachricht vom Kontaktformular</title>
+		<title>Wolkenhof: Neue Nachricht vom Kontaktformular</title>
 		<!-- The title tag shows in email notifications -->
 
 		<link
@@ -427,7 +427,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   ';
   $headers = 'MIME-Version: 1.0' . "\r\n";
   $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-  $headers .= 'From: wolkenhof Kontaktformular <jgu@wolkenhof.com>' . "\r\n";
+  $headers .= 'From: Wolkenhof Kontaktformular <jgu@Wolkenhof.com>' . "\r\n";
   //$headers .= 'From: ' . $from . "\r\n";
 
   if (empty($name)) {
